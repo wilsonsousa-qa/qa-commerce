@@ -9,6 +9,6 @@ When("o usuário coloca URL no navegador", () => {
 });
 
 Then("o usuário deve ser redirecionado para a página inicial", () => {
-  cy.title().should("include", "Home");
-  cy.get("h1").should("include.text", "QA Commerce");
+  cy.title().should("include", "HOME");
+  cy.get("h1").should("include.text", "Sua Melhor Experiência de Compra Está Aqui!");
 });
