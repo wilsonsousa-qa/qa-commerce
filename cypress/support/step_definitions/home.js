@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given("que o usuário ao pesquisar pela URL da aplicação", () => {
+Given("que o usuário ao acessar URL da aplicação", () => {
   cy.visit("http://localhost:3000/");
 });
 
