@@ -1,7 +1,7 @@
-Feature: Acesso Functionality
+# language: pt
+Funcionalidade: Acesso
 
-    Feature testar a funcionalidade de acesso da aplicação
-    Scenario: Acessar a aplicação com sucesso
-        Given que o usuário ao pesquisar pela URL da aplicação  
-        When o usuário coloca URL no navegador
-        Then o usuário deve ser redirecionado para a página inicial
+  Cenário: Acessar a aplicação com sucesso
+    Dado que o usuário ao pesquisar pela URL da aplicação  
+    Quando o usuário coloca URL no navegador
+    Então o usuário deve ser redirecionado para a página inicial
