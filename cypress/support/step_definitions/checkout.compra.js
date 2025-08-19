@@ -1,11 +1,11 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-const firstName = 'brasil';
+const firstName = 'antonio';
 const lastName = 'silva';
 const email = `${firstName}.${lastName}@gmail.com`;
 
 // Cenário: Preencher dados e finalizar compra
-Given("que o usuário adicionou produtos ao carrinho", () => {
+Given("que o usuário já possui o produto ao carrinho", () => {
   cy.visit("http://localhost:3000/");
   cy.get(':nth-child(1) > .card > .card-body > .btn').click(); // adiciona 1º produto
 });

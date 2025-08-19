@@ -5,7 +5,7 @@ Funcionalidade: Checkout de Compra
   Para gerar o pedido com sucesso
 
   Cenário: Preencher dados e finalizar compra
-    Dado que o usuário adicionou produtos ao carrinho
+    Dado que o usuário já possui o produto ao carrinho
     Quando o usuário acessa a página de checkout
     E preenche os dados pessoais e de pagamento
     Então o usuário deve ver a confirmação do pedido
