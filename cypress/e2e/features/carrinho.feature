@@ -8,6 +8,8 @@ Funcionalidade: Carrinho de Compras
 
   Cenário: Verificar itens no carrinho
     Dado que o usuário adicionou produtos ao carrinho
-    Quando o usuário acessa a página do carrinho
+    Quando o usuário acessa diretamente a página do carrinho
     Então o usuário deve ver os produtos adicionados no carrinho
+
+
 
