@@ -7,6 +7,7 @@ describe('Acesso carrinho remover compra', () => {
     cy.get('h1').should('include.text', 'SEU CARRINHO');
     cy.get('.cart-item > .btn').click();
     cy.get('#cart-list > .text-center > p').should('include.text', 'Seu carrinho está vazio');
+    cy.get('.text-center > .btn').click();
 
   })    
 });
