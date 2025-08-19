@@ -1,20 +1,19 @@
-// cypress.config.js
 const { defineConfig } = require("cypress");
+const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
+const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
+const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
 
 module.exports = defineConfig({
-  // opções globais
-  viewportWidth: 1280,
-  viewportHeight: 720,
-  defaultCommandTimeout: 10000,
-  pageLoadTimeout: 60000,
-  chromeWebSecurity: false,
-
   e2e: {
-    baseUrl: "http://localhost:3000",
-    // mantenha seus .spec.js (ou adapte se preferir .cy.js)
-    specPattern: "cypress/e2e/**/*.spec.js",
+    specPattern: "cypress/e2e/**/*.feature",
     setupNodeEvents(on, config) {
-      // eventos/node plugins aqui se precisar
+      on(
+        "file:preprocessor",
+        createBundler({
+          plugins: [createEsbuildPlugin(config)],
+        })
+      );
+      preprocessor.addCucumberPreprocessorPlugin(on, config);
       return config;
     },
   },

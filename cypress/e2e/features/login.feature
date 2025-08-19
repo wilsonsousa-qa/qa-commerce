@@ -1,5 +1,3 @@
-language: pt
-
 Feature: Acesso Functionality
 
     Feature testar a funcionalidade de acesso da aplicação
